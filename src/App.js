@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import styled from "@emotion/styled"
 import './App.css';
 
-function App() {
+import Header from './components/Header'
+
+const Gallery = styled.section`
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+`
+
+const GalleryItem = styled.img`
+  width: 100%;
+`
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Gallery>
+        <GalleryItem src="/images/gallery/1.jpg" />
+        <GalleryItem src="/images/gallery/2.jpg" />
+        <GalleryItem src="/images/gallery/3.jpg" />
+        <GalleryItem src="/images/gallery/4.jpg" />
+        <GalleryItem src="/images/gallery/5.jpg" />
+      </Gallery>
+
     </div>
   );
 }
